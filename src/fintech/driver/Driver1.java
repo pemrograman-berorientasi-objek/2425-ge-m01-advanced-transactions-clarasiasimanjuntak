@@ -1,7 +1,5 @@
-// 12S23019_clarasia l. simanjuntak
-// 12S23043_grage tiodora
-
 package fintech.driver;
+
 import fintech.model.Account;
 import fintech.model.Transaction;
 import java.util.ArrayList;
@@ -47,7 +45,7 @@ public class Driver1 {
                 if (targetAccount.updateBalance(amount)) {
                     Transaction newTransaction = new Transaction(accountName, amount, postedAt, note);
                     transactions.add(newTransaction);
-                    System.out.println(newTransaction + "|" + String.format("%.1f", targetAccount.getBalance()));
+                    System.out.println(newTransaction);
                 }
             } 
             else if ("show-account".equals(command)) {
